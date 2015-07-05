@@ -20,6 +20,7 @@ $(function() {
             if (firstName.indexOf(' ') >= 0) {
                 firstName = name.split(' ').slice(0, -1).join(' ');
             }
+            $('#contactMeBtn').html('<i class="fa fa-refresh fa-spin"></i> Sending');
             $.ajax({
                 url: "https://meghprkh-meghprkh.rhcloud.com/projects/contact_me/",
                 type: "POST",
@@ -43,6 +44,7 @@ $(function() {
 
                     //clear all fields
                     $('#contactForm').trigger("reset");
+                    $('#contactMeBtn').html('Send')
                 },
                 error: function() {
                     // Fail message
@@ -53,6 +55,7 @@ $(function() {
                     $('#success > .alert-danger').append('</div>');
                     //clear all fields
                     $('#contactForm').trigger("reset");
+                    $('#contactMeBtn').html('Send')
                 },
             })
         },
