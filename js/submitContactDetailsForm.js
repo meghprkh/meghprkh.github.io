@@ -2,7 +2,7 @@ function submitContactDetailsForm (value) {
   //console.log(value);
   $("#contact-details").html('<i class="fa fa-refresh fa-spin"></i> Loading');
   $.ajax({
-      url: "https://web.iiit.ac.in/~megh.parikh/get_contact_details/",
+      url: "https://megh-meghprkh.rhcloud.com/contact",
       type: "POST",
       data: {
           "g-recaptcha-response": value
