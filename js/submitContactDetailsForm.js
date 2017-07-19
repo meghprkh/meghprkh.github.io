@@ -1,8 +1,10 @@
+window.contact_details_url = "https://meghprkh.now.sh/"
+
 function submitContactDetailsForm (value) {
   //console.log(value);
   $("#contact-details").html('<i class="fa fa-refresh fa-spin"></i> Loading');
   $.ajax({
-      url: "https://megh-meghprkh.rhcloud.com/contact",
+      url: window.contact_details_url,
       type: "POST",
       data: {
           "g-recaptcha-response": value
