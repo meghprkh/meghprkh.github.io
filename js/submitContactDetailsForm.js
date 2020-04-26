@@ -1,4 +1,4 @@
-window.contact_details_url = "https://meghprkh.now.sh/"
+window.contact_details_url = "https://meghprkh.now.sh/api/"
 
 function submitContactDetailsForm (value) {
   //console.log(value);
