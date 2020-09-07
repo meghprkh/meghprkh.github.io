@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Megh Parikh</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Megh Parikh&#x27;s portfolio site">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/css/index.css">
+  <script data-goatcounter="https://meghprkh.goatcounter.com/count"
+          async src="//gc.zgo.at/count.js"></script>
+  <noscript>
+      <img src="https://meghprkh.goatcounter.com/count?p=/contact/?noscript">
+  </noscript>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="pure-menu pure-menu-horizontal">
+        <a href="/" class="pure-menu-heading pure-menu-link">Megh Parikh</a>
+        <label for="hamburger">&#9776;</label>
+        <input type="checkbox" id="hamburger"/>
+        <ul class="pure-menu-list">
+          <li class="pure-menu-item"><a href="/resources/Megh_Parikh_Resume.pdf" class="pure-menu-link">CV</a></li>
+          <li class="pure-menu-item"><a href="/experience/" class="pure-menu-link">Experience</a></li>
+          <li class="pure-menu-item"><a href="/projects/" class="pure-menu-link">Projects</a></li>
+          <li class="pure-menu-item"><a href="/teaching/" class="pure-menu-link">Teaching</a></li>
+          <li class="pure-menu-item"><a href="/contact/" class="pure-menu-link">Contact</a></li>
+          <li class="pure-menu-item"><a href="/blog" class="pure-menu-link">Blog</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <div class="container">
+
+<link rel="stylesheet" href="/css/loading.css" />
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script src="/js/getContactDetails.js"></script>
+
+<div id="captcha-form">
+  <p>Please verify that you are a human to get my contact details :)</p>
+  <form action="?" method="POST">
+    <div
+      class="g-recaptcha"
+      data-sitekey="6LeVVgkTAAAAAPc_EhtqfKNsn7h70voHj4eQapMj"
+      data-callback="getContactDetails"
+    ></div>
+    <br />
+  </form>
+</div>
+
+<div id="contact-details-loading" hidden><div class="lds-dual-ring"></div></div>
+
+<div id="contact-details" hidden>
+  You may reach out to me via one of the following channels:
+  <ul>
+    <li>Mail: <a id="email"></a></li>
+    <li>Phone: <a id="phone"></a></li>
+    <li>Telegram: <a id="telegram"></a></li>
+    <li>Matrix/Riot: <a id="matrix"></a></li>
+  </ul>
+</div>
+
+<h3>Social media links:</h3>
+
+<a href="http://github.com/meghprkh" class="socialmedia">
+  <img src="https://unpkg.com/simple-icons@latest/icons/github.svg" />
+  /meghprkh
+</a>
+
+<a href="https://www.linkedin.com/in/meghprkh/" class="socialmedia">
+  <img src="https://unpkg.com/simple-icons@v13.21.0/icons/linkedin.svg" />
+  /in/meghprkh
+</a>
+
+<a href="https://www.facebook.com/meghprkh" class="socialmedia">
+  <img src="https://unpkg.com/simple-icons@latest/icons/facebook.svg" />
+  /meghprkh
+</a>
+
+  </div>
+
+  <footer class="container">
+    <div class="float-right">
+      <a href="https://github.com/meghprkh/" class="socialmedia">
+        <img src="https://unpkg.com/simple-icons@latest/icons/github.svg" />
+      </a>
+      <a href="/contact/" class="socialmedia">
+        <img src="/img/mail.svg" />
+      </a>
+      <a href="https://www.facebook.com/meghprkh/" class="socialmedia">
+        <img src="https://unpkg.com/simple-icons@latest/icons/facebook.svg" />
+      </a>
+      <a href="https://www.linkedin.com/in/meghprkh/" class="socialmedia">
+        <img src="https://unpkg.com/simple-icons@v13.21.0/icons/linkedin.svg" />
+      </a>
+    </div>
+  </footer>
+
+</body>
+</html>
