@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-family: "Lato", Verdana, Helvetica, sans-serif;
 }
 
 .container {
@@ -26,6 +26,25 @@ footer {
   margin-top: 1em !important;
 }
 
+.profile-pic {
+  float: right;
+  margin: 25px 0 25px 25px;
+  border-radius: 50%;
+  width: 200px;
+  max-width: 100%;
+}
+
+@media only screen and (max-width: 50rem) {
+  .container {
+    margin: 0.75rem;
+  }
+  .profile-pic {
+    display: block;
+    float: none;
+    margin: 0 auto;
+  }
+}
+
 .float-right {
   float: right;
 }
@@ -36,12 +55,13 @@ footer {
 
 a {
   color: #1772d0;
-  text-decoration:none;
+  text-decoration: none;
 }
 
-a:focus, a:hover {
+a:focus,
+a:hover {
   color: #f09228;
-  text-decoration:none;
+  text-decoration: none;
 }
 
 .row {
@@ -76,4 +96,38 @@ a:focus, a:hover {
 }
 .socialmedia img {
   height: 1em;
+}
+
+/* Responsive navbar */
+
+/* Hide Hamburger */
+.pure-menu label,
+.pure-menu input {
+  display: none;
+}
+
+@media screen and (max-width: 50rem) {
+  /* Show hamburger icon */
+  .pure-menu label {
+    display: block;
+    float: right;
+    background: #e1e1e1;
+    padding: 0.5em;
+    user-select: none;
+    cursor: pointer;
+  }
+
+  /* Make menu items vertical */
+  .pure-menu-horizontal .pure-menu-list .pure-menu-item {
+    display: block;
+    border-top: 1px solid #e1e1e1;
+  }
+
+  /* Toggle Show/Hide Menu */
+  .pure-menu-horizontal .pure-menu-list {
+    display: none;
+  }
+  .pure-menu-horizontal input:checked ~ .pure-menu-list {
+    display: block;
+  }
 }
