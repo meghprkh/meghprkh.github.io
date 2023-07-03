@@ -1,4 +1,4 @@
-const CONTACT_DETAILS_URL = "https://meghprkh.now.sh/api/";
+const CONTACT_DETAILS_URL = "https://meghprkh.vercel.app/api/";
 
 async function getContactDetails(value) {
   const captcha_form = document.getElementById("captcha-form");
