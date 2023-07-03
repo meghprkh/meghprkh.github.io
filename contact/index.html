@@ -11,7 +11,7 @@
   <script data-goatcounter="https://meghprkh.goatcounter.com/count"
           async src="//gc.zgo.at/count.js"></script>
   <noscript>
-      <img src="https://meghprkh.goatcounter.com/count?p=/teaching.html?noscript">
+      <img src="https://meghprkh.goatcounter.com/count?p=/contact/?noscript">
   </noscript>
 </head>
 <body>
@@ -34,44 +34,50 @@
   </header>
   <div class="container">
 
-<h1>Teaching</h1>
+<link rel="stylesheet" href="css/loading.css" />
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script src="js/getContactDetails.js"></script>
 
-<div class="pure-g">
-  <div class="row">
-    <div class="pure-u-1-5" class="img-container">
-      <img class="pure-img" width="75%" src="img/teaching/graphics.png"
-           >
-    </div>
-    <div class="pure-u-4-5">
-      <strong>Computer Graphics</strong>
-      <em class="float-right">Jan &#x27;18 - July &#x27;18</em>
-      <br />
-      <em>Teaching Assistant</em>
-      <p><ul>
-<li>Course with over 150 students registered</li>
-<li>Took multiple tutorials introducing OpenGL and matrix transformations</li>
-<li>Responsible for creating assignments and providing boilerplate code for the same</li>
-</ul>
-</p>
-    </div>
-  </div>
-  <div class="row">
-    <div class="pure-u-1-5" class="img-container">
-      <img class="pure-img" width="75%" src="img/teaching/itws.png"
-           >
-    </div>
-    <div class="pure-u-4-5">
-      <strong>Linux Scripting &amp; Tools</strong>
-      <em class="float-right">Aug &#x27;17 - Dec &#x27;17</em>
-      <br />
-      <em>Teaching Assistant</em>
-      <p><ul>
-<li>Took labs introducing over 200 freshers to Linux, Git and Bash. Also introduced basic HTML, CSS and JS</li>
-<li>Evaluated assignments related to Bash and a project involving a basic website</li>
-</ul>
-</p>
-    </div>
-  </div>
+<div id="captcha-form">
+  <p>Please verify that you are a human to get my contact details :)</p>
+  <form action="?" method="POST">
+    <div
+      class="g-recaptcha"
+      data-sitekey="6LeVVgkTAAAAAPc_EhtqfKNsn7h70voHj4eQapMj"
+      data-callback="getContactDetails"
+    ></div>
+    <br />
+  </form>
+</div>
+
+<div id="contact-details-loading" hidden><div class="lds-dual-ring"></div></div>
+
+<div id="contact-details" hidden>
+  You may reach out to me via one of the following channels:
+  <ul>
+    <li>Mail: <a id="email"></a></li>
+    <li>Phone: <a id="phone"></a></li>
+    <li>Telegram: <a id="telegram"></a></li>
+    <li>Matrix/Riot: <a id="matrix"></a></li>
+  </ul>
+</div>
+
+<h3>Social media links:</h3>
+
+<a href="http://github.com/meghprkh" class="socialmedia">
+  <img src="https://unpkg.com/simple-icons@1.9.6/icons/github.svg" />
+  /meghprkh
+</a>
+
+<a href="https://www.linkedin.com/in/meghprkh/" class="socialmedia">
+  <img src="https://unpkg.com/simple-icons@1.9.6/icons/linkedin.svg" />
+  /in/meghprkh
+</a>
+
+<a href="https://www.facebook.com/meghprkh" class="socialmedia">
+  <img src="https://unpkg.com/simple-icons@1.9.6/icons/facebook.svg" />
+  /meghprkh
+</a>
 
   </div>
 
