@@ -4,42 +4,112 @@
   <meta charset="UTF-8" />
   <title>Megh Parikh</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="color-scheme" content="light dark">
   <meta name="description" content="Megh Parikh&#x27;s portfolio site">
-  <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="/css/index.css">
-  <script data-goatcounter="https://meghprkh.goatcounter.com/count"
+  <style>
+      :root {
+          --bg: #fff;
+          --accent-bg: #f5f7ff;
+          --text: #212121;
+      }
+      @media (prefers-color-scheme: dark) {
+          :root {
+              color-scheme: dark;
+              --bg: #212121;
+              --text: #dcdcdc;
+          }
+      }
+      body {
+          color: var(--text);
+          background-color: var(--bg);
+      }
+  </style>
+  <link
+      rel="preload"
+      href="https://unpkg.com/simpledotcss@2.3.5/simple.min.css"
+      integrity="sha256-jB3eicSYINO80mYegnfqO40htZSvsa9Fbv7Je5fgIDo="
+      crossorigin="anonymous"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+  />
+  <noscript>
+      <link
+          rel="stylesheet"
+          ref="https://unpkg.com/simpledotcss@2.3.5/simple.min.css"
+          integrity="sha256-jB3eicSYINO80mYegnfqO40htZSvsa9Fbv7Je5fgIDo="
+          crossorigin="anonymous"
+      />
+  </noscript>
+  <link rel="stylesheet" href="/css/index.css" />  <script data-goatcounter="https://meghprkh.goatcounter.com/count"
           async src="//gc.zgo.at/count.js"></script>
   <noscript>
-      <img src="https://meghprkh.goatcounter.com/count?p=/index.hbs?noscript">
+      <img src="https://meghprkh.goatcounter.com/count?p=/?noscript">
   </noscript>
 </head>
 <body>
   <header>
-    <div class="container">
-      <div class="pure-menu pure-menu-horizontal">
-        <a href="/" class="pure-menu-heading pure-menu-link">Megh Parikh</a>
-        <label for="hamburger">&#9776;</label>
-        <input type="checkbox" id="hamburger"/>
-        <ul class="pure-menu-list">
-          <li class="pure-menu-item"><a href="/resources/Megh_Parikh_Resume.pdf" class="pure-menu-link">CV</a></li>
-          <li class="pure-menu-item"><a href="/experience/" class="pure-menu-link">Experience</a></li>
-          <li class="pure-menu-item"><a href="/projects/" class="pure-menu-link">Projects</a></li>
-          <li class="pure-menu-item"><a href="/teaching/" class="pure-menu-link">Teaching</a></li>
-          <li class="pure-menu-item"><a href="/contact/" class="pure-menu-link">Contact</a></li>
-          <li class="pure-menu-item"><a href="/blog" class="pure-menu-link">Blog</a></li>
-        </ul>
-      </div>
+    <div class="title-row">
+        <h3><a href="/">Megh Parikh</a></h3>
+        <p><i>Senior Software Developer interested in C++, Rust & Mathematics</i></p>
     </div>
+    <nav>
+        <ul>
+            <li>
+                <a  aria-current="true" 
+                    href="/">
+                    Home
+                </a>
+            </li>
+            <li>
+                <a 
+                    href="/resources/Megh_Parikh_Resume.pdf">
+                    CV
+                </a>
+            </li>
+            <li>
+                <a 
+                    href="/experience/">
+                    Experience
+                </a>
+            </li>
+            <li>
+                <a 
+                    href="/projects/">
+                    Projects
+                </a>
+            </li>
+            <li>
+                <a 
+                    href="/teaching/">
+                    Teaching
+                </a>
+            </li>
+            <li>
+                <a 
+                    href="/contact/">
+                    Contact
+                </a>
+            </li>
+            <li>
+                <a 
+                    href="/blog">
+                    Blog
+                </a>
+            </li>
+        </ul>
+    </nav>
   </header>
-  <div class="container">
 
-<div class="pure-g">
+  <main>
 
-  <div class="pure-u-1">
-    <p>
-      <img class="profile-pic" src="./img/megh.jpg">
-      <p>I am a Senior Software Developer at <strong><a href="https://bloomberg.com">Bloomberg</a></strong>. I graduated from <strong><a href="https://www.iiit.ac.in/">IIIT, Hyderabad</a></strong> with a <strong>Bachelor of Technology in Computer Science &amp; Engineering with Honours (Computer Vision)</strong>.</p>
+<p>
+    <picture class="profile-pic">
+        <source srcset="/img/megh.webp" type="image/webp">
+        <source srcset="/img/megh.jpg">
+        <img src="/img/megh.jpg" alt="Profile Pic">
+    </picture>
+
+    <p>I am a Senior Software Developer at <strong><a href="https://bloomberg.com">Bloomberg</a></strong>. I graduated from <strong><a href="https://www.iiit.ac.in/">IIIT, Hyderabad</a></strong> with a <strong>Bachelor of Technology in Computer Science &amp; Engineering with Honours (Computer Vision)</strong>.</p>
 <p>Presently, I work with on an analytics engine / query language, developing a high-performance library in C++ with <strong>metaprogramming</strong> features. Previously I worked with the Tickerplant team where my job involves collecting and processing a <strong>high volume</strong> of financial data and providing it to internal clients. My day-to-day job mostly involves <strong>C++</strong> and <strong>Python</strong>.</p>
 <p>I have always liked developing solutions for solving real-world problems. I like Software development and  Machine Learning and also work as a student System Administrator. I have a diverse technical skillset and am proficient in several programming languages, software tools and programming frameworks.</p>
 <p>During the summer of &#39;18, I worked at <strong>Adobe Systems</strong> where my work involved distributed systems. I worked on developing a service for allowing real-time lockless collaboration on graphical documents with offline editing support. (A service like Google Docs). I was particularly enthralled when we demoed the service after integrating it with a vector graphics editor.</p>
@@ -47,36 +117,36 @@
 <p>I was an <strong>undergraduate researcher</strong> under <a href="http://cvit.iiit.ac.in/people/faculty/people/faculty/cvit-faculty/jawahar">Prof CV Jawahar</a>, where my work involved developing state-of-art <strong>deep-learning</strong> models to solve real-world problems. I have worked on face detection and OCR as part of this.</p>
 <p>I have also developed a lot of websites using the <strong>ReactJS</strong> and <strong>NodeJS</strong> stack as part of various freelance projects and other internships.</p>
 
-    </p>
+</p>
 
-    <p align="center">
-      <a href="/contact/">Contact</a> &nbsp/&nbsp
-      <a target="_blank" href="/resources/Megh_Parikh_Resume.pdf">CV</a> &nbsp/&nbsp
-      <a target="_blank" href="https://github.com/meghprkh">GitHub</a> &nbsp/&nbsp
-      <a target="_blank" href="https://www.linkedin.com/in/meghprkh"> LinkedIn </a>
-    </p>
-  </div>
+<p align="center">
+    <a href="/contact/">Contact</a> &nbsp/&nbsp
+    <a target="_blank" href="/resources/Megh_Parikh_Resume.pdf">CV</a> &nbsp/&nbsp
+    <a target="_blank" href="https://github.com/meghprkh">GitHub</a> &nbsp/&nbsp
+    <a target="_blank" href="https://www.linkedin.com/in/meghprkh"> LinkedIn </a>
+</p>
 
 
 </div>
 
-  </div>
+  </main>
 
-  <footer class="container">
+  <footer>
     <div class="float-right">
       <a href="https://github.com/meghprkh/" class="socialmedia">
-        <img src="https://unpkg.com/simple-icons@latest/icons/github.svg" />
+        <img src="/img/social/github.svg" />
       </a>
       <a href="/contact/" class="socialmedia">
         <img src="/img/mail.svg" />
       </a>
       <a href="https://www.facebook.com/meghprkh/" class="socialmedia">
-        <img src="https://unpkg.com/simple-icons@latest/icons/facebook.svg" />
+        <img src="/img/social/facebook.svg" />
       </a>
       <a href="https://www.linkedin.com/in/meghprkh/" class="socialmedia">
-        <img src="https://unpkg.com/simple-icons@v13.21.0/icons/linkedin.svg" />
+        <img src="/img/social/linkedin.svg" />
       </a>
     </div>
+    <br class="reset-float" />
   </footer>
 
 </body>

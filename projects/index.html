@@ -4,11 +4,43 @@
   <meta charset="UTF-8" />
   <title>Megh Parikh</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="color-scheme" content="light dark">
   <meta name="description" content="Megh Parikh&#x27;s portfolio site">
-  <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="/css/index.css">
-  <script data-goatcounter="https://meghprkh.goatcounter.com/count"
+  <style>
+      :root {
+          --bg: #fff;
+          --accent-bg: #f5f7ff;
+          --text: #212121;
+      }
+      @media (prefers-color-scheme: dark) {
+          :root {
+              color-scheme: dark;
+              --bg: #212121;
+              --text: #dcdcdc;
+          }
+      }
+      body {
+          color: var(--text);
+          background-color: var(--bg);
+      }
+  </style>
+  <link
+      rel="preload"
+      href="https://unpkg.com/simpledotcss@2.3.5/simple.min.css"
+      integrity="sha256-jB3eicSYINO80mYegnfqO40htZSvsa9Fbv7Je5fgIDo="
+      crossorigin="anonymous"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+  />
+  <noscript>
+      <link
+          rel="stylesheet"
+          ref="https://unpkg.com/simpledotcss@2.3.5/simple.min.css"
+          integrity="sha256-jB3eicSYINO80mYegnfqO40htZSvsa9Fbv7Je5fgIDo="
+          crossorigin="anonymous"
+      />
+  </noscript>
+  <link rel="stylesheet" href="/css/index.css" />  <script data-goatcounter="https://meghprkh.goatcounter.com/count"
           async src="//gc.zgo.at/count.js"></script>
   <noscript>
       <img src="https://meghprkh.goatcounter.com/count?p=/projects/?noscript">
@@ -16,213 +48,258 @@
 </head>
 <body>
   <header>
-    <div class="container">
-      <div class="pure-menu pure-menu-horizontal">
-        <a href="/" class="pure-menu-heading pure-menu-link">Megh Parikh</a>
-        <label for="hamburger">&#9776;</label>
-        <input type="checkbox" id="hamburger"/>
-        <ul class="pure-menu-list">
-          <li class="pure-menu-item"><a href="/resources/Megh_Parikh_Resume.pdf" class="pure-menu-link">CV</a></li>
-          <li class="pure-menu-item"><a href="/experience/" class="pure-menu-link">Experience</a></li>
-          <li class="pure-menu-item"><a href="/projects/" class="pure-menu-link">Projects</a></li>
-          <li class="pure-menu-item"><a href="/teaching/" class="pure-menu-link">Teaching</a></li>
-          <li class="pure-menu-item"><a href="/contact/" class="pure-menu-link">Contact</a></li>
-          <li class="pure-menu-item"><a href="/blog" class="pure-menu-link">Blog</a></li>
-        </ul>
-      </div>
+    <div class="title-row">
+        <h3><a href="/">Megh Parikh</a></h3>
+        <p><i>Senior Software Developer interested in C++, Rust & Mathematics</i></p>
     </div>
+    <nav>
+        <ul>
+            <li>
+                <a 
+                    href="/">
+                    Home
+                </a>
+            </li>
+            <li>
+                <a 
+                    href="/resources/Megh_Parikh_Resume.pdf">
+                    CV
+                </a>
+            </li>
+            <li>
+                <a 
+                    href="/experience/">
+                    Experience
+                </a>
+            </li>
+            <li>
+                <a  aria-current="true" 
+                    href="/projects/">
+                    Projects
+                </a>
+            </li>
+            <li>
+                <a 
+                    href="/teaching/">
+                    Teaching
+                </a>
+            </li>
+            <li>
+                <a 
+                    href="/contact/">
+                    Contact
+                </a>
+            </li>
+            <li>
+                <a 
+                    href="/blog">
+                    Blog
+                </a>
+            </li>
+        </ul>
+    </nav>
   </header>
-  <div class="container">
+
+  <main>
 
 <h1>Projects</h1>
 
-<div class="pure-g">
-  <div class="row">
-    <div class="pure-u-1-5" class="img-container">
-      <img class="pure-img" width="75%" src="/img/projects/optical_flow.png"
-           >
+<div class="row split">
+    <div>
+        <img width="75%" src="/img/projects/optical_flow.png"
+        >
     </div>
-    <div class="pure-u-4-5">
-      <strong>
+    <div>
+        <strong>
         
         Static optical flow detection as a classification problem
         
-      </strong>
-      <em class="float-right red">[ Deep Learning, Keras, OpenCV, Computer Vision ]</em>
-      <p><ul>
+        </strong>
+        <em class="float-right accented">[ Deep Learning, Keras, OpenCV, Computer Vision ]</em>
+        <br class="reset-float" />
+        <ul>
 <li>Problem deals with detecting the optical flow from a static image.</li>
 <li>Modelled this regression problem  as a classification problem by clustering the training data&#39;s outputs, helping us train it with less data</li>
 </ul>
-</p>
+
     </div>
-  </div>
-  <div class="row">
-    <div class="pure-u-1-5" class="img-container">
-      <img class="pure-img" width="75%" src="/img/projects/raft.png"
-           >
+</div>
+<div class="row split">
+    <div>
+        <img width="75%" src="/img/projects/raft.png"
+        >
     </div>
-    <div class="pure-u-4-5">
-      <strong>
+    <div>
+        <strong>
         
         Raft Consensus Algorithm
         
-      </strong>
-      <em class="float-right red">[ Distributed Systems, Consensus Algorithm, Protobuf, Socket, C++ ]</em>
-      <p><ul>
+        </strong>
+        <em class="float-right accented">[ Distributed Systems, Consensus Algorithm, Protobuf, Socket, C++ ]</em>
+        <br class="reset-float" />
+        <ul>
 <li>Implemented a fault-tolerant and performant consensus algorithm to sync state machines across multiple servers</li>
 <li>Implemented in C++ using Protobuf for serialization and C++11 standard library for threading</li>
 </ul>
-</p>
+
     </div>
-  </div>
-  <div class="row">
-    <div class="pure-u-1-5" class="img-container">
-      <img class="pure-img" width="75%" src="/img/projects/latex.png"
-           >
+</div>
+<div class="row split">
+    <div>
+        <img width="75%" src="/img/projects/latex.png"
+        >
     </div>
-    <div class="pure-u-4-5">
-      <strong>
+    <div>
+        <strong>
         
         Printed equation to LaTeX
         
-      </strong>
-      <em class="float-right red">[ Digital Image Processing, Matlab, SVM ]</em>
-      <p><ul>
+        </strong>
+        <em class="float-right accented">[ Digital Image Processing, Matlab, SVM ]</em>
+        <br class="reset-float" />
+        <ul>
 <li>Used classic image processing techniques like morphology to segment out the characters</li>
 <li>Used a basic SVM+HoG classifier for recognizing the characters</li>
 </ul>
-</p>
+
     </div>
-  </div>
-  <div class="row">
-    <div class="pure-u-1-5" class="img-container">
-      <img class="pure-img" width="75%" src="/img/projects/shell.png"
-           >
+</div>
+<div class="row split">
+    <div>
+        <img width="75%" src="/img/projects/shell.png"
+        >
     </div>
-    <div class="pure-u-4-5">
-      <strong>
+    <div>
+        <strong>
         <a href="https://github.com/meghprkh/linux-shell">
         Linux Shell
         </a>
-      </strong>
-      <em class="float-right red">[ C, UNIX System Calls ]</em>
-      <p><ul>
+        </strong>
+        <em class="float-right accented">[ C, UNIX System Calls ]</em>
+        <br class="reset-float" />
+        <ul>
 <li>Bash-like shell which interacted with the kernel using syscalls. Supported user-defined and built-in commands.</li>
 <li>Also supported piping and input-output redirection along with foreground-background jobs</li>
 </ul>
-</p>
+
     </div>
-  </div>
-  <div class="row">
-    <div class="pure-u-1-5" class="img-container">
-      <img class="pure-img" width="75%" src="/img/projects/aquarium.png"
-           >
+</div>
+<div class="row split">
+    <div>
+        <img width="75%" src="/img/projects/aquarium.png"
+        >
     </div>
-    <div class="pure-u-4-5">
-      <strong>
+    <div>
+        <strong>
         
         Games - BrickBreaker, Blockorz &amp; a WebGL Aquarium
         
-      </strong>
-      <em class="float-right red">[ C++, OpenGL, Javascript, WebGL ]</em>
-      <p><ul>
+        </strong>
+        <em class="float-right accented">[ C++, OpenGL, Javascript, WebGL ]</em>
+        <br class="reset-float" />
+        <ul>
 <li><a href="https://github.com/meghprkh/brickbreaker">BrickBreaker</a> and <a href="https://github.com/meghprkh/blockorz">Blockorz</a> are 2D and 3D games respectively coded from scratch in OpenGL and C++ without using any physics/game engine</li>
 <li><a href="https://github.com/meghprkh/webgl-aquarium">WebGL Aquarium</a> is a 3D aquarium with lighting, bubbles, reflective glass and multiple kinds of fish</li>
 </ul>
-</p>
+
     </div>
-  </div>
-  <div class="row">
-    <div class="pure-u-1-5" class="img-container">
-      <img class="pure-img" width="75%" src="/img/projects/ai.png"
-           >
+</div>
+<div class="row split">
+    <div>
+        <img width="75%" src="/img/projects/ai.png"
+        >
     </div>
-    <div class="pure-u-4-5">
-      <strong>
+    <div>
+        <strong>
         <a href="https://github.com/meghprkh/tictactoe-bot">
         Ultimate Tic-Tac-Toe Bot
         </a>
-      </strong>
-      <em class="float-right red">[ Artificial Intelligence, Heuristics, Python ]</em>
-      <p><ul>
+        </strong>
+        <em class="float-right accented">[ Artificial Intelligence, Heuristics, Python ]</em>
+        <br class="reset-float" />
+        <ul>
 <li>AI bot which plays a competitive 2-player game called Ultimate Tic Tac Toe</li>
 <li>Uses Min-Max algorithm with Alpha-Beta pruning to evaluate the best move among the numerous possible outcomes</li>
 </ul>
-</p>
+
     </div>
-  </div>
-  <div class="row">
-    <div class="pure-u-1-5" class="img-container">
-      <img class="pure-img" width="75%" src="/img/projects/faceauth.png"
-           >
+</div>
+<div class="row split">
+    <div>
+        <img width="75%" src="/img/projects/faceauth.png"
+        >
     </div>
-    <div class="pure-u-4-5">
-      <strong>
+    <div>
+        <strong>
         
         Face-recognition based authentication app
         
-      </strong>
-      <em class="float-right red">[ Computer Vision, Deep Learning, Python ]</em>
-      <p><ul>
+        </strong>
+        <em class="float-right accented">[ Computer Vision, Deep Learning, Python ]</em>
+        <br class="reset-float" />
+        <ul>
 <li>Allows authentication to a web portal via face recognition. Uses DLib for detecting faces and a ResNet feature extractor</li>
 <li>A SVM is used as classifier trained on the small set of images we get for the person</li>
 </ul>
-</p>
+
     </div>
-  </div>
-  <div class="row">
-    <div class="pure-u-1-5" class="img-container">
-      <img class="pure-img" width="75%" src="/img/projects/db.png"
-           >
+</div>
+<div class="row split">
+    <div>
+        <img width="75%" src="/img/projects/db.png"
+        >
     </div>
-    <div class="pure-u-4-5">
-      <strong>
+    <div>
+        <strong>
         <a href="https://github.com/meghprkh/mini-sql-engine">
         Mini-SQL engine
         </a>
-      </strong>
-      <em class="float-right red">[ SQL, Database Systems, Python ]</em>
-      <p><ul>
+        </strong>
+        <em class="float-right accented">[ SQL, Database Systems, Python ]</em>
+        <br class="reset-float" />
+        <ul>
 <li>Implemented a small SQL engine with support for basic queries, joins and aggregate functions</li>
 </ul>
-</p>
+
     </div>
-  </div>
-  <div class="row">
-    <div class="pure-u-1-5" class="img-container">
-      
+</div>
+<div class="row split">
+    <div>
+        
     </div>
-    <div class="pure-u-4-5">
-      <strong>
+    <div>
+        <strong>
         
         Mini-Dropbox: P2P File Sharing System
         
-      </strong>
-      <em class="float-right red">[ Sockets, Networks, P2P, TCP, UDP ]</em>
-      <p><ul>
+        </strong>
+        <em class="float-right accented">[ Sockets, Networks, P2P, TCP, UDP ]</em>
+        <br class="reset-float" />
+        <ul>
 <li>Implement a peer-to-peer dropbox which keeps two directories in sync and could work on both TCP &amp; UDP sockets</li>
 </ul>
-</p>
+
     </div>
-  </div>
+</div>
 
-  </div>
+  </main>
 
-  <footer class="container">
+  <footer>
     <div class="float-right">
       <a href="https://github.com/meghprkh/" class="socialmedia">
-        <img src="https://unpkg.com/simple-icons@latest/icons/github.svg" />
+        <img src="/img/social/github.svg" />
       </a>
       <a href="/contact/" class="socialmedia">
         <img src="/img/mail.svg" />
       </a>
       <a href="https://www.facebook.com/meghprkh/" class="socialmedia">
-        <img src="https://unpkg.com/simple-icons@latest/icons/facebook.svg" />
+        <img src="/img/social/facebook.svg" />
       </a>
       <a href="https://www.linkedin.com/in/meghprkh/" class="socialmedia">
-        <img src="https://unpkg.com/simple-icons@v13.21.0/icons/linkedin.svg" />
+        <img src="/img/social/linkedin.svg" />
       </a>
     </div>
+    <br class="reset-float" />
   </footer>
 
 </body>

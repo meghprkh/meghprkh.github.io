@@ -4,11 +4,43 @@
   <meta charset="UTF-8" />
   <title>Megh Parikh</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="color-scheme" content="light dark">
   <meta name="description" content="Megh Parikh&#x27;s portfolio site">
-  <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="/css/index.css">
-  <script data-goatcounter="https://meghprkh.goatcounter.com/count"
+  <style>
+      :root {
+          --bg: #fff;
+          --accent-bg: #f5f7ff;
+          --text: #212121;
+      }
+      @media (prefers-color-scheme: dark) {
+          :root {
+              color-scheme: dark;
+              --bg: #212121;
+              --text: #dcdcdc;
+          }
+      }
+      body {
+          color: var(--text);
+          background-color: var(--bg);
+      }
+  </style>
+  <link
+      rel="preload"
+      href="https://unpkg.com/simpledotcss@2.3.5/simple.min.css"
+      integrity="sha256-jB3eicSYINO80mYegnfqO40htZSvsa9Fbv7Je5fgIDo="
+      crossorigin="anonymous"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+  />
+  <noscript>
+      <link
+          rel="stylesheet"
+          ref="https://unpkg.com/simpledotcss@2.3.5/simple.min.css"
+          integrity="sha256-jB3eicSYINO80mYegnfqO40htZSvsa9Fbv7Je5fgIDo="
+          crossorigin="anonymous"
+      />
+  </noscript>
+  <link rel="stylesheet" href="/css/index.css" />  <script data-goatcounter="https://meghprkh.goatcounter.com/count"
           async src="//gc.zgo.at/count.js"></script>
   <noscript>
       <img src="https://meghprkh.goatcounter.com/count?p=/experience/?noscript">
@@ -16,182 +48,209 @@
 </head>
 <body>
   <header>
-    <div class="container">
-      <div class="pure-menu pure-menu-horizontal">
-        <a href="/" class="pure-menu-heading pure-menu-link">Megh Parikh</a>
-        <label for="hamburger">&#9776;</label>
-        <input type="checkbox" id="hamburger"/>
-        <ul class="pure-menu-list">
-          <li class="pure-menu-item"><a href="/resources/Megh_Parikh_Resume.pdf" class="pure-menu-link">CV</a></li>
-          <li class="pure-menu-item"><a href="/experience/" class="pure-menu-link">Experience</a></li>
-          <li class="pure-menu-item"><a href="/projects/" class="pure-menu-link">Projects</a></li>
-          <li class="pure-menu-item"><a href="/teaching/" class="pure-menu-link">Teaching</a></li>
-          <li class="pure-menu-item"><a href="/contact/" class="pure-menu-link">Contact</a></li>
-          <li class="pure-menu-item"><a href="/blog" class="pure-menu-link">Blog</a></li>
-        </ul>
-      </div>
+    <div class="title-row">
+        <h3><a href="/">Megh Parikh</a></h3>
+        <p><i>Senior Software Developer interested in C++, Rust & Mathematics</i></p>
     </div>
+    <nav>
+        <ul>
+            <li>
+                <a 
+                    href="/">
+                    Home
+                </a>
+            </li>
+            <li>
+                <a 
+                    href="/resources/Megh_Parikh_Resume.pdf">
+                    CV
+                </a>
+            </li>
+            <li>
+                <a  aria-current="true" 
+                    href="/experience/">
+                    Experience
+                </a>
+            </li>
+            <li>
+                <a 
+                    href="/projects/">
+                    Projects
+                </a>
+            </li>
+            <li>
+                <a 
+                    href="/teaching/">
+                    Teaching
+                </a>
+            </li>
+            <li>
+                <a 
+                    href="/contact/">
+                    Contact
+                </a>
+            </li>
+            <li>
+                <a 
+                    href="/blog">
+                    Blog
+                </a>
+            </li>
+        </ul>
+    </nav>
   </header>
-  <div class="container">
+
+  <main>
 
 <h1>Experience</h1>
 
-<div class="pure-g">
-  <div class="row">
-    <div class="pure-u-1">
-      <strong>Bloomberg</strong>
-       | New York 
-      <em class="float-right">July &#x27;22 - Present</em>
-      <br />
-      <em>Senior Software Developer</em>
-      <em class="float-right red">[ C++, Library-Development, Metaprogramming ]</em>
-      <p><ul>
+<div class="row">
+    <strong>Bloomberg</strong>
+     | New York 
+    <em class="float-right">July &#x27;22 - Present</em>
+    <br class="reset-float" />
+    <em>Senior Software Developer</em>
+    <em class="float-right accented">[ C++, Library-Development, Metaprogramming ]</em>
+    <br class="reset-float" />
+    <ul>
 <li>Developing an embedded analytics engine from scratch for powering inhouse services and query language</li>
 <li>High performance library written in modern C++ with metaprogramming to ease development of new kernels</li>
 <li>Replicating functionality and improving the language spec of the previous query language</li>
 </ul>
-</p>
-    </div>
-  </div>
-  <div class="row">
-    <div class="pure-u-1">
-      <strong>Bloomberg</strong>
-       | London 
-      <em class="float-right">Aug &#x27;19 - July &#x27;22</em>
-      <br />
-      <em>Software Developer</em>
-      <em class="float-right red">[ C++, Python, Distributed Systems ]</em>
-      <p><ul>
+
+</div>
+<div class="row">
+    <strong>Bloomberg</strong>
+     | London 
+    <em class="float-right">Aug &#x27;19 - July &#x27;22</em>
+    <br class="reset-float" />
+    <em>Software Developer</em>
+    <em class="float-right accented">[ C++, Python, Distributed Systems ]</em>
+    <br class="reset-float" />
+    <ul>
 <li>Working with the Ticker Plant team, collecting and processing a high volume of data and providing it to internal clients</li>
 <li>Migrated automatic Python bindings for the C++ codebase to new infrastructure while preserving the API</li>
 <li>Innersource contributions @ Bloomberg. Added support for TIME_INTERVAL in the Rust driver for Comdb2</li>
 </ul>
-</p>
-    </div>
-  </div>
-  <div class="row">
-    <div class="pure-u-1">
-      <strong>Adobe Systems</strong>
-       | Noida 
-      <em class="float-right">May &#x27;18 - July &#x27;18</em>
-      <br />
-      <em>Product Intern</em>
-      <em class="float-right red">[ Distributed Systems, Socket Programming, NodeJS ]</em>
-      <p><ul>
+
+</div>
+<div class="row">
+    <strong>Adobe Systems</strong>
+     | Noida 
+    <em class="float-right">May &#x27;18 - July &#x27;18</em>
+    <br class="reset-float" />
+    <em>Product Intern</em>
+    <em class="float-right accented">[ Distributed Systems, Socket Programming, NodeJS ]</em>
+    <br class="reset-float" />
+    <ul>
 <li>Created realtime collaborative editing service like Google Docs for graphical documents with support for offline editing</li>
 <li>Integrated it with an opensource vector graphics app, SVG-Edit</li>
 </ul>
-</p>
-    </div>
-  </div>
-  <div class="row">
-    <div class="pure-u-1">
-      <strong>IIIT Hyderabad</strong>
-      
-      <em class="float-right">Aug &#x27;18 - July &#x27;19</em>
-      <br />
-      <em>Systems Administrator</em>
-      <em class="float-right red">[ OpenVZ, LDAP, Networks, Email, GSuite ]</em>
-      <p><ul>
+
+</div>
+<div class="row">
+    <strong>IIIT Hyderabad</strong>
+    
+    <em class="float-right">Aug &#x27;18 - July &#x27;19</em>
+    <br class="reset-float" />
+    <em>Systems Administrator</em>
+    <em class="float-right accented">[ OpenVZ, LDAP, Networks, Email, GSuite ]</em>
+    <br class="reset-float" />
+    <ul>
 <li>Aided migration of a subset of users to GSuite which is kept in sync with the institute LDAP. Also helped develop a email backup solution.</li>
 <li>Responsible for on call, maintenance, and deployment of institute-wide infrastructure and services (LDAP, Squid, Email, lists, NS, etc)</li>
 </ul>
-</p>
-    </div>
-  </div>
-  <div class="row">
-    <div class="pure-u-1">
-      <strong>Centre for Visual Information Technology</strong>
-       | IIIT Hyd 
-      <em class="float-right">July &#x27;17 - July &#x27;19</em>
-      <br />
-      <em>Undergraduate Researcher</em>
-      <em class="float-right red">[ Deep Learning, PyTorch ]</em>
-      <p><ul>
+
+</div>
+<div class="row">
+    <strong>Centre for Visual Information Technology</strong>
+     | IIIT Hyd 
+    <em class="float-right">July &#x27;17 - July &#x27;19</em>
+    <br class="reset-float" />
+    <em>Undergraduate Researcher</em>
+    <em class="float-right accented">[ Deep Learning, PyTorch ]</em>
+    <br class="reset-float" />
+    <ul>
 <li>Working with <a href="http://cvit.iiit.ac.in/people/faculty/people/faculty/cvit-faculty/jawahar">Prof CV Jawahar</a> on Document Semantic Structure Extraction to aid blind students to understand lecture content</li>
 <li>Earlier worked on face recognition and automated analysis of news videos &amp; bias detection</li>
 </ul>
-</p>
-    </div>
-  </div>
-  <div class="row">
-    <div class="pure-u-1">
-      <strong>Google Summer of Code</strong>
-       | GNOME 
-      <em class="float-right">Apr &#x27;16 - Aug &#x27;16</em>
-      <br />
-      <em>Open Source Contributor</em>
-      <em class="float-right red">[ Vala (C#), C, GLib, GTK, Linux Kernel APIs ]</em>
-      <p><ul>
+
+</div>
+<div class="row">
+    <strong>Google Summer of Code</strong>
+     | GNOME 
+    <em class="float-right">Apr &#x27;16 - Aug &#x27;16</em>
+    <br class="reset-float" />
+    <em>Open Source Contributor</em>
+    <em class="float-right accented">[ Vala (C#), C, GLib, GTK, Linux Kernel APIs ]</em>
+    <br class="reset-float" />
+    <ul>
 <li>Worked On <a href="https://wiki.gnome.org/Apps/Games">GNOME Games</a> - an emulator app, to add gamepad/game controller support</li>
 <li>Developed a library for abstracting the Linux Input API and integrated it with GNOME Games</li>
 </ul>
-</p>
-    </div>
-  </div>
-  <div class="row">
-    <div class="pure-u-1">
-      <strong>Felicity</strong>
-       | IIIT Hyderabad 
-      <em class="float-right">Aug &#x27;17 - Aug &#x27;18</em>
-      <br />
-      <em>Systems Administrator</em>
-      <em class="float-right red">[ Docker, NodeJS, Java, PHP, Kong/Nginx, LDAP ]</em>
-      <p><ul>
+
+</div>
+<div class="row">
+    <strong>Felicity</strong>
+     | IIIT Hyderabad 
+    <em class="float-right">Aug &#x27;17 - Aug &#x27;18</em>
+    <br class="reset-float" />
+    <em>Systems Administrator</em>
+    <em class="float-right accented">[ Docker, NodeJS, Java, PHP, Kong/Nginx, LDAP ]</em>
+    <br class="reset-float" />
+    <ul>
 <li>Migrated a monolith PHP app to a services based architecture with <strong>dockerized</strong> deployment</li>
 <li>Migrated SSO system and user accounts from CAS+LDAP to Keycloak (OIDC provider)</li>
 </ul>
-</p>
-    </div>
-  </div>
-  <div class="row">
-    <div class="pure-u-1">
-      <strong>Paymatrix</strong>
-      
-      <em class="float-right">Aug &#x27;16 - Nov &#x27;16</em>
-      <br />
-      <em>Fullstack Developer</em>
-      <em class="float-right red">[ Golang, ReactJS, MongoDB, Javascript, HTML, CSS ]</em>
-      <p><ul>
+
+</div>
+<div class="row">
+    <strong>Paymatrix</strong>
+    
+    <em class="float-right">Aug &#x27;16 - Nov &#x27;16</em>
+    <br class="reset-float" />
+    <em>Fullstack Developer</em>
+    <em class="float-right accented">[ Golang, ReactJS, MongoDB, Javascript, HTML, CSS ]</em>
+    <br class="reset-float" />
+    <ul>
 <li>Made an API-based backend using Golang and a frontend app in ReactJS consuming this API</li>
 <li>Extended their app to support paying school fees and added data analytics to their other offerings</li>
 </ul>
-</p>
-    </div>
-  </div>
-  <div class="row">
-    <div class="pure-u-1">
-      <strong>Bibox Labs</strong>
-      
-      <em class="float-right">Nov &#x27;15 - Jan &#x27;16</em>
-      <br />
-      <em>Frontend Developer</em>
-      <em class="float-right red">[ Javascript, ReactJS, Redux, HTML, CSS ]</em>
-      <p><ul>
+
+</div>
+<div class="row">
+    <strong>Bibox Labs</strong>
+    
+    <em class="float-right">Nov &#x27;15 - Jan &#x27;16</em>
+    <br class="reset-float" />
+    <em>Frontend Developer</em>
+    <em class="float-right accented">[ Javascript, ReactJS, Redux, HTML, CSS ]</em>
+    <br class="reset-float" />
+    <ul>
 <li>Developed an educational electronics app where you can select components and connect them using drag-and-drop</li>
 <li>Arduino code was generated using an intuitive GUI. The board, components and code could be then shipped as a DIY-kit</li>
 </ul>
-</p>
-    </div>
-  </div>
 
-  </div>
+</div>
 
-  <footer class="container">
+  </main>
+
+  <footer>
     <div class="float-right">
       <a href="https://github.com/meghprkh/" class="socialmedia">
-        <img src="https://unpkg.com/simple-icons@latest/icons/github.svg" />
+        <img src="/img/social/github.svg" />
       </a>
       <a href="/contact/" class="socialmedia">
         <img src="/img/mail.svg" />
       </a>
       <a href="https://www.facebook.com/meghprkh/" class="socialmedia">
-        <img src="https://unpkg.com/simple-icons@latest/icons/facebook.svg" />
+        <img src="/img/social/facebook.svg" />
       </a>
       <a href="https://www.linkedin.com/in/meghprkh/" class="socialmedia">
-        <img src="https://unpkg.com/simple-icons@v13.21.0/icons/linkedin.svg" />
+        <img src="/img/social/linkedin.svg" />
       </a>
     </div>
+    <br class="reset-float" />
   </footer>
 
 </body>

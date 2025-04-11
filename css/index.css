@@ -1,133 +1,120 @@
-* {
-  box-sizing: border-box;
-  font-family: "Lato", Verdana, Helvetica, sans-serif;
+/* Simple CSS theming */
+:root {
+    --accent: #0d47b1;
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        --accent: #ffb300;
+    }
 }
 
-.container {
-  max-width: 50rem;
-  margin: 0 auto;
+/* Simple CSS overrides */
+body {
+    grid-template-columns: 1fr min(60rem, 90%) 1fr;
+}
+body > header {
+    padding-bottom: 0.25rem;
+}
+body > footer {
+    margin-top: 2.5rem;
+    padding: 1rem 0.5rem 1.5rem;
 }
 
-header {
-  border-bottom: 1px solid #e3e3e3;
-  margin-bottom: 2em;
-  padding: 1em;
-  background: #f9f9f9;
-  width: 100%;
+/* Default overrides */
+:not(li) > ul {
+    margin: 0.1rem 0.1rem;
+    margin-bottom: 1rem;
+    padding: 0rem 1.25rem;
 }
 
-header .pure-menu-heading {
-  font-weight: 600;
-}
-
-footer {
-  border-top: 1px solid black;
-  padding-top: 0.5em;
-  margin-top: 1em !important;
-}
-
-.profile-pic {
-  float: right;
-  margin: 25px 0 25px 25px;
-  border-radius: 50%;
-  width: 200px;
-  max-width: 100%;
-}
-
-@media only screen and (max-width: 50rem) {
-  .container {
-    margin: 0.75rem;
-  }
-  .profile-pic {
-    display: block;
-    float: none;
-    margin: 0 auto;
-  }
-}
-
+/* Misc Utils */
 .float-right {
-  float: right;
+    float: right;
+}
+.reset-float {
+    clear: both;
+}
+.accented {
+    color: var(--accent);
 }
 
-.red {
-  color: #df0010;
+/* Title row */
+.title-row {
+    width: min(50%, 38rem);
+    display: inline-grid;
+    grid-template-columns: 40% 60%;
+    align-items: center;
+    margin-top: 1rem;
+}
+.title-row > * {
+    padding: 0.5rem;
+    margin: 0;
+}
+.title-row > :first-child {
+    text-align: right;
+    line-height: 2.5rem;
+    padding-right: 0.75rem;
+    border-right: 1px solid var(--accent);
+}
+.title-row a {
+    text-decoration: none;
+}
+.title-row > :last-child {
+    text-align: left;
+    padding-left: 0.75rem;
 }
 
-a {
-  color: #1772d0;
-  text-decoration: none;
+/* Homepage */
+.profile-pic {
+    float: right;
+    margin: 25px 0 25px 25px;
+    max-width: 100%;
+}
+.profile-pic > * {
+    border-radius: 50%;
 }
 
-a:focus,
-a:hover {
-  color: #f09228;
-  text-decoration: none;
-}
-
+/* Rows in pages */
 .row {
-  border-bottom: 1px solid #e1e1e1;
-  padding-top: 0.5em;
-  width: 100%;
+    border-bottom: 1px dotted var(--border);
+    padding-top: 1em;
+    width: 100%;
+}
+.row:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+.row.split {
+    display: grid;
+    grid-template-columns: 20% 80%;
 }
 
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-.row .img-container {
-  vertical-align: middle;
-}
-
-.row img {
-  margin: 5%;
-}
-
-.pure-g .row:last-child {
-  border-bottom: none;
-}
-
+/* Social media icons */
 .socialmedia {
-  padding-right: 1em;
+    padding-right: 1em;
+    text-decoration: none;
 }
 .socialmedia:last-child {
-  padding-right: 0;
+    padding-right: 0;
 }
 .socialmedia img {
-  height: 1em;
+    height: 1.15rem;
 }
 
-/* Responsive navbar */
+/* Responsive overrides */
+@media only screen and (max-width: 60rem) {
+    .profile-pic {
+        display: block;
+        float: none;
+        margin: 0 auto;
+        text-align: center;
+    }
 
-/* Hide Hamburger */
-.pure-menu label,
-.pure-menu input {
-  display: none;
-}
-
-@media screen and (max-width: 50rem) {
-  /* Show hamburger icon */
-  .pure-menu label {
-    display: block;
-    float: right;
-    background: #e1e1e1;
-    padding: 0.5em;
-    user-select: none;
-    cursor: pointer;
-  }
-
-  /* Make menu items vertical */
-  .pure-menu-horizontal .pure-menu-list .pure-menu-item {
-    display: block;
-    border-top: 1px solid #e1e1e1;
-  }
-
-  /* Toggle Show/Hide Menu */
-  .pure-menu-horizontal .pure-menu-list {
-    display: none;
-  }
-  .pure-menu-horizontal input:checked ~ .pure-menu-list {
-    display: block;
-  }
+    .title-row {
+        width: min(95%, 38rem);
+        grid-template-columns: 30% 70%;
+    }
+    .title-row > * {
+        padding: 0.25rem;
+    }
 }

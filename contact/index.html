@@ -4,11 +4,43 @@
   <meta charset="UTF-8" />
   <title>Megh Parikh</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="color-scheme" content="light dark">
   <meta name="description" content="Megh Parikh&#x27;s portfolio site">
-  <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="/css/index.css">
-  <script data-goatcounter="https://meghprkh.goatcounter.com/count"
+  <style>
+      :root {
+          --bg: #fff;
+          --accent-bg: #f5f7ff;
+          --text: #212121;
+      }
+      @media (prefers-color-scheme: dark) {
+          :root {
+              color-scheme: dark;
+              --bg: #212121;
+              --text: #dcdcdc;
+          }
+      }
+      body {
+          color: var(--text);
+          background-color: var(--bg);
+      }
+  </style>
+  <link
+      rel="preload"
+      href="https://unpkg.com/simpledotcss@2.3.5/simple.min.css"
+      integrity="sha256-jB3eicSYINO80mYegnfqO40htZSvsa9Fbv7Je5fgIDo="
+      crossorigin="anonymous"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+  />
+  <noscript>
+      <link
+          rel="stylesheet"
+          ref="https://unpkg.com/simpledotcss@2.3.5/simple.min.css"
+          integrity="sha256-jB3eicSYINO80mYegnfqO40htZSvsa9Fbv7Je5fgIDo="
+          crossorigin="anonymous"
+      />
+  </noscript>
+  <link rel="stylesheet" href="/css/index.css" />  <script data-goatcounter="https://meghprkh.goatcounter.com/count"
           async src="//gc.zgo.at/count.js"></script>
   <noscript>
       <img src="https://meghprkh.goatcounter.com/count?p=/contact/?noscript">
@@ -16,23 +48,59 @@
 </head>
 <body>
   <header>
-    <div class="container">
-      <div class="pure-menu pure-menu-horizontal">
-        <a href="/" class="pure-menu-heading pure-menu-link">Megh Parikh</a>
-        <label for="hamburger">&#9776;</label>
-        <input type="checkbox" id="hamburger"/>
-        <ul class="pure-menu-list">
-          <li class="pure-menu-item"><a href="/resources/Megh_Parikh_Resume.pdf" class="pure-menu-link">CV</a></li>
-          <li class="pure-menu-item"><a href="/experience/" class="pure-menu-link">Experience</a></li>
-          <li class="pure-menu-item"><a href="/projects/" class="pure-menu-link">Projects</a></li>
-          <li class="pure-menu-item"><a href="/teaching/" class="pure-menu-link">Teaching</a></li>
-          <li class="pure-menu-item"><a href="/contact/" class="pure-menu-link">Contact</a></li>
-          <li class="pure-menu-item"><a href="/blog" class="pure-menu-link">Blog</a></li>
-        </ul>
-      </div>
+    <div class="title-row">
+        <h3><a href="/">Megh Parikh</a></h3>
+        <p><i>Senior Software Developer interested in C++, Rust & Mathematics</i></p>
     </div>
+    <nav>
+        <ul>
+            <li>
+                <a 
+                    href="/">
+                    Home
+                </a>
+            </li>
+            <li>
+                <a 
+                    href="/resources/Megh_Parikh_Resume.pdf">
+                    CV
+                </a>
+            </li>
+            <li>
+                <a 
+                    href="/experience/">
+                    Experience
+                </a>
+            </li>
+            <li>
+                <a 
+                    href="/projects/">
+                    Projects
+                </a>
+            </li>
+            <li>
+                <a 
+                    href="/teaching/">
+                    Teaching
+                </a>
+            </li>
+            <li>
+                <a  aria-current="true" 
+                    href="/contact/">
+                    Contact
+                </a>
+            </li>
+            <li>
+                <a 
+                    href="/blog">
+                    Blog
+                </a>
+            </li>
+        </ul>
+    </nav>
   </header>
-  <div class="container">
+
+  <main>
 
 <link rel="stylesheet" href="/css/loading.css" />
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
@@ -65,37 +133,38 @@
 <h3>Social media links:</h3>
 
 <a href="http://github.com/meghprkh" class="socialmedia">
-  <img src="https://unpkg.com/simple-icons@latest/icons/github.svg" />
+  <img src="/img/social/github.svg" />
   /meghprkh
 </a>
 
 <a href="https://www.linkedin.com/in/meghprkh/" class="socialmedia">
-  <img src="https://unpkg.com/simple-icons@v13.21.0/icons/linkedin.svg" />
+  <img src="/img/social/linkedin.svg" />
   /in/meghprkh
 </a>
 
 <a href="https://www.facebook.com/meghprkh" class="socialmedia">
-  <img src="https://unpkg.com/simple-icons@latest/icons/facebook.svg" />
+  <img src="/img/social/facebook.svg" />
   /meghprkh
 </a>
 
-  </div>
+  </main>
 
-  <footer class="container">
+  <footer>
     <div class="float-right">
       <a href="https://github.com/meghprkh/" class="socialmedia">
-        <img src="https://unpkg.com/simple-icons@latest/icons/github.svg" />
+        <img src="/img/social/github.svg" />
       </a>
       <a href="/contact/" class="socialmedia">
         <img src="/img/mail.svg" />
       </a>
       <a href="https://www.facebook.com/meghprkh/" class="socialmedia">
-        <img src="https://unpkg.com/simple-icons@latest/icons/facebook.svg" />
+        <img src="/img/social/facebook.svg" />
       </a>
       <a href="https://www.linkedin.com/in/meghprkh/" class="socialmedia">
-        <img src="https://unpkg.com/simple-icons@v13.21.0/icons/linkedin.svg" />
+        <img src="/img/social/linkedin.svg" />
       </a>
     </div>
+    <br class="reset-float" />
   </footer>
 
 </body>

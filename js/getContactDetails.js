@@ -1,5 +1,6 @@
 const CONTACT_DETAILS_URL = "https://meghprkh.vercel.app/api/";
 
+// deno-lint-ignore no-unused-vars
 async function getContactDetails(value) {
   const captcha_form = document.getElementById("captcha-form");
   const loading_indicator = document.getElementById("contact-details-loading");
@@ -15,7 +16,7 @@ async function getContactDetails(value) {
   });
   loading_indicator.setAttribute("hidden", "");
   if (!res.ok) {
-    details.innerHTML = `<b style="color: red"> Unexpected error : ${await res.text()} </b>`;
+    details.innerHTML = `<b style="color: accented"> Unexpected error : ${await res.text()} </b>`;
     details.removeAttribute("hidden");
     return;
   }
